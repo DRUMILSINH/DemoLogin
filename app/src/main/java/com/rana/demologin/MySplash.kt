@@ -1,4 +1,4 @@
-package com.diya.demokevin
+package com.rana.demologin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

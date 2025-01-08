@@ -1,14 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Settings">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Fixed indentation in header RelativeLayout -->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:layout_marginEnd="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/btnMore"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </RelativeLayout>
+
+    <!-- Main Content ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- General Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Edit Profile -->
+            <LinearLayout
+                style="@style/SettingsItem">
+                <ImageView
+                    style="@style/SettingsIcon"
+                    android:src="@drawable/profile"/>
+                <TextView
+                    style="@style/SettingsText"
+                    android:text="Edit Profile"/>
+                <ImageView
+                    style="@style/SettingsArrow"/>
+            </LinearLayout>
+
+            <!-- Change Password -->
+            <LinearLayout
+                style="@style/SettingsItem">
+                <ImageView
+                    style="@style/SettingsIcon"
+                    android:src="@drawable/password"/>
+                <TextView
+                    style="@style/SettingsText"
+                    android:text="Change Password"/>
+                <ImageView
+                    style="@style/SettingsArrow"/>
+            </LinearLayout>
+
+            <!-- Notification -->
+            <LinearLayout
+                style="@style/SettingsItem">
+                <ImageView
+                    style="@style/SettingsIcon"
+                    android:src="@drawable/notification"/>
+                <TextView
+                    style="@style/SettingsText"
+                    android:text="Notification"/>
+                <ImageView
+                    style="@style/SettingsArrow"/>
+            </LinearLayout>
+
+            <!-- Security -->
+            <LinearLayout
+                style="@style/SettingsItem">
+                <ImageView
+                    style="@style/SettingsIcon"
+                    android:src="@drawable/security"/>
+                <TextView
+                    style="@style/SettingsText"
+                    android:text="Security"/>
+                <ImageView
+                    style="@style/SettingsArrow"/>
+            </LinearLayout>
+
+            <!-- Language -->
+            <LinearLayout
+                style="@style/SettingsItem">
+                <ImageView
+                    style="@style/SettingsIcon"
+                    android:src="@drawable/language"/>
+                <TextView
+                    style="@style/SettingsText"
+                    android:text="Language"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:textColor="#808080"
+                    android:layout_marginEnd="8dp"/>
+                <ImageView
+                    style="@style/SettingsArrow"/>
+            </LinearLayout>
+
+            <!-- Preferences Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferences"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Legal and Policies -->
+            <LinearLayout
+                style="@style/SettingsItem">
+                <ImageView
+                    style="@style/SettingsIcon"
+                    android:src="@drawable/security"/>
+                <TextView
+                    style="@style/SettingsText"
+                    android:text="Legal and Policies"/>
+                <ImageView
+                    style="@style/SettingsArrow"/>
+            </LinearLayout>
+
+            <!-- Help and Support -->
+            <LinearLayout
+                style="@style/SettingsItem">
+                <ImageView
+                    style="@style/SettingsIcon"
+                    android:src="@drawable/help"/>
+                <TextView
+                    style="@style/SettingsText"
+                    android:text="Help and Support"/>
+                <ImageView
+                    style="@style/SettingsArrow"/>
+            </LinearLayout>
+
+            <!-- Logout Button -->
+            <LinearLayout
+                style="@style/SettingsItem">
+                <ImageView
+                    style="@style/SettingsIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/logout"/>
+                <TextView
+                    android:id="@+id/logoutButton"
+                    style="@style/SettingsText"
+                    android:text="Logout"
+                    android:textColor="#FF0000"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

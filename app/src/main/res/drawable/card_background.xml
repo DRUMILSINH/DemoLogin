@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Rounded Corners -->
+<corners android:radius="16dp" />
+
+<!-- Card Background Color -->
+<solid android:color="@color/white" />
+
+<!-- Optional Shadow/Border -->
+<stroke android:width="1dp" android:color="#E0E0E0" />
+</shape>
